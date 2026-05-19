@@ -1,0 +1,5 @@
+.hero-bg {
+  background-size: cover;
+  background: linear-gradient(rgba(34, 49, 36, 0.7), rgba(34, 49, 36, 0.7)),
+  url('https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=1600') center;
+}
