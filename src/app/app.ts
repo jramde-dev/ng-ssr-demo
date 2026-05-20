@@ -14,7 +14,12 @@ export class App {
   private readonly seo = inject(SeoService);
   private readonly structuredData = inject(StructuredDataService);
 
-  constructor() {
+  ngOnInit() {
+    this.setSeoData();
+    this.structureData();
+  }
+
+  setSeoData() {
     this.seo.setSeoData({
       title: 'Vivre Volaille',
       description: 'The best solution for your needs.',
@@ -22,7 +27,9 @@ export class App {
       url: 'https://jramde-dev.github.io/ng-ssr-demo/',
       type: 'website',
     });
+  }
 
+  structureData() {
     this.structuredData.set(
       {
         '@context': 'https://schema.org',
