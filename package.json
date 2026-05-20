@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:landing-page": "node dist/landing-page/server/server.mjs"
+    "serve:ssr:landing-page": "node dist/landing-page/server/server.mjs",
+    "deploy:prod": "ng build --configuration production && ng deploy --dir=dist/landing-page/browser --base-href=/ng-ssr-demo/"
   },
   "private": true,
   "packageManager": "npm@11.11.0",
@@ -31,6 +32,7 @@
     "@tailwindcss/postcss": "^4.1.12",
     "@types/express": "^5.0.1",
     "@types/node": "^20.17.19",
+    "angular-cli-ghpages": "^3.0.3",
     "jsdom": "^28.0.0",
     "postcss": "^8.5.3",
     "prettier": "^3.8.1",
